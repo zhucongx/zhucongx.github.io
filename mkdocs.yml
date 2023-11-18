@@ -1,0 +1,104 @@
+# [Info]
+site_name: Zhucong Xi
+site_url: https://zhucongx.github.io
+site_author: Zhucong Xi
+site_description: 
+
+# [Navigtion]
+nav:
+  - Home: index.md
+  - Blog: 
+    - Blog/index.md
+  - Note:
+    - Free energy:
+      - Ideal gas: Note/FreeEnergy/IdealGas.md
+      - Harmonic approximation: Note/FreeEnergy/HamonicApproximation.md
+  - Research: Research/index.md
+  - Me:
+    - Me/index.md
+
+# [UI]
+## [top]
+theme:
+  name: material
+  palette:
+    - scheme: default # Palette toggle for light mode
+      primary: indigo
+      accent: orange # 链接等可交互元件的高亮色
+      toggle:
+        icon: material/weather-night # 图标
+        name: switch to dark mode # 鼠标悬停时的提示
+    - scheme: slate # Palette toggle for dark mode
+      primary: black
+      accent: orange
+      toggle:
+        icon: material/weather-sunny
+        name: switch to light mode
+  features:
+    - navigation.tabs # 使用Tab来进行分类
+    - navigation.top # 返回顶部的按钮 在上滑时出现
+    - navigation.indexes # Tab会有一个index.md 而不是在打开Tab时打开第一篇文章
+    - navigation.expand # 打开Tab时左侧目录全部展开
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+  language: en
+  icon:
+    repo: fontawesome/brands/github
+repo_url: https://github.com/zhucongx/zhucongx.github.io
+repo_name:
+edit_uri: edit/main/docs
+copyright: 
+extra:
+  generator: true
+  social:
+    - icon: fontawesome/brands/google
+      link: https://scholar.google.com/citations?hl=en&user=qwq7mBcAAAAJ
+      name: Google Scholar | Zhucong Xi
+    - icon: fontawesome/brands/github
+      link: https://github.com/zhucongx
+      name: GitHub | Zhucong Xi
+
+# [Extensions]
+plugins:
+  - blog:
+      blog_dir: Blog
+      blog_toc: true
+      post_date_format: long
+  - git-revision-date-localized: # Adding the date of last update and creation of a document at the bottom of each page
+      type: date
+      enable_creation_date: false
+  - search:
+    # insider已经支持中文的分词搜索了 https://squidfunk.github.io/mkdocs-material/blog/2022/chinese-search-support/
+      lang:
+        - en
+  - tags # 给单篇文章添加标签 https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/?h=tags
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - attr_list # 给图片后面添加{width="300"}设置大小
+  - toc:
+      permalink: true # 固定标题位置为当前位置
+  - pymdownx.highlight: # 代码块高亮
+      linenums: true # 显示行号
+      auto_title: true # 显示编程语言名称
+  - pymdownx.superfences # 代码块高亮插件
+  - meta # 支持Markdown文件上方自定义标题标签等
+  - admonition # https://squidfunk.github.io/mkdocs-material/reference/admonitions/#inline-blocks
+  - pymdownx.details # admonition需要
+
+extra_javascript:
+  # - Mkdocs/javascripts/mathjax.js
+  # - https://polyfill.io/v3/polyfill.min.js?features=es6
+  # - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+  - Mkdocs/javascripts/katex.js 
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js  
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+  - Mkdocs/stylesheets/extra.css
+  - Mkdocs/css/no-footer.css # 不使用底部的翻页
+  - Mkdocs/css/unordered-list-symbols.css # multiplt unordered list symbols

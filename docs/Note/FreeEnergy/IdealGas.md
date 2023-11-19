@@ -211,7 +211,7 @@ if you choose the first vibrational energy level to be the zero of energy, the c
 $$
 \begin{split}
 E_{\text{vib}} & \equiv E_{\text{ZPE}} + k_BT^2 \left(\frac{\partial \ln Q_{\text{vib}}}{\partial T}\right)_V \\
-& = E_{\text{ZPE}} + k_B T^2\sum_i \left(\frac{h\nu_i}{k_BT^2}\frac{e^{-\frac{h\nu_i}{k_BT}} }{ 1-e^{-\frac{h\nu_i}{k_BT}}} \right) \\
+& = E_{\text{ZPE}} + k_B T^2\sum_i \left(\frac{h\nu_i}{k_BT^2}\frac{e^{-\frac{h\nu_i}{k_BT}} }{ 1-e^{-\frac{h\nu_i}{k_BT}}} \right)
 \end{split}
 $$
 
@@ -221,5 +221,39 @@ $$
 E_{\text{ZPE}} =\frac{1}{2} \sum_i h\nu_i
 $$
 
+## Electronic contributions
+The partition function of electronic contribution is
+
+$$
+Q_{\text{ele}} = \sum_i \omega_i e^{-\frac{\epsilon_i}{k_BT}}
+$$
+
+where $\omega_i$ the the degeneracy of the energy level, $\epsilon_i$ is the energy of the n-th level.
+
+We can assume that the first electronic excitation energy is much greater than $k_B T$. Hence,the first and higher excited states are assumed to be inaccessible at any temperature. Further, the energy of the ground state is assumed to be zero. These assumptions simplify the electronic partition function to:
+
+$$
+Q_{\text{ele}} = \omega_0 = 2\times n_{\text{spin}}+1
+$$
+
+which is simply the electronic spin multiplicity of the molecule (the number of unpaired electron $2n_{\text{spin}}$ + 1).
+
+Its contribution to entropy is
+
+$$
+\begin{split}
+S_{\text{ele}} & \equiv k_B \left[ \ln \left(Q_{\text{ele}} \right) + T\left(\frac{\partial \ln Q_{\text{ele}}}{\partial T}\right)_V\right] \\
+& = k_B \ln \left(2\times n_{\text{spin}}+1 \right)
+\end{split}
+$$
+
+Since the partition function is not a temperature dependent term, the electronic heat capacity and the internal thermal energy due to electronic motion are both zero
+
+$$
+\begin{split}
+E_{\text{ele}} & \equiv k_BT^2 \left(\frac{\partial \ln Q_{\text{ele}}}{\partial T}\right)_V \\
+& = 0
+\end{split}
+$$
 ## Reference
 [1] Ochterski, Joseph W. "Thermochemistry in gaussian." Gaussian Inc 1 (2000): 1-19.

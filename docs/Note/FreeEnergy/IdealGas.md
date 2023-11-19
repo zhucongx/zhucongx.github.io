@@ -233,7 +233,7 @@ where $\omega_i$ the the degeneracy of the energy level, $\epsilon_i$ is the ene
 We can assume that the first electronic excitation energy is much greater than $k_B T$. Hence,the first and higher excited states are assumed to be inaccessible at any temperature. Further, the energy of the ground state is assumed to be zero. These assumptions simplify the electronic partition function to:
 
 $$
-Q_{\text{ele}} = \omega_0 = 2\times n_{\text{spin}}+1
+Q_{\text{ele}} = \omega_0 = 2 n_{\text{spin}}+1
 $$
 
 which is simply the electronic spin multiplicity of the molecule (the number of unpaired electron $2n_{\text{spin}}$ + 1).
@@ -243,7 +243,7 @@ Its contribution to entropy is
 $$
 \begin{split}
 S_{\text{ele}} & \equiv k_B \left[ \ln \left(Q_{\text{ele}} \right) + T\left(\frac{\partial \ln Q_{\text{ele}}}{\partial T}\right)_V\right] \\
-& = k_B \ln \left(2\times n_{\text{spin}}+1 \right)
+& = k_B \ln \left(2 n_{\text{spin}}+1 \right)
 \end{split}
 $$
 

@@ -9,9 +9,11 @@ tags:
 The thermodynamic properties of a gas can be estimated from its molecular vibration frequency under the ideal gas approximation. This is illustrated in the context of determining the translational, rotational, and vibrational contributions to the molar entropy and the molar specific heat of a gas.
 
 The gibbs free energy $G$ of a gas molecule is calculated by
+
 $$
 G = H-TS
 $$
+
 the enthalpy $H$, entropy $S$ at given temperature $T$ and pressure $P$ can be calculated as follows.
 
 ### Entropy
@@ -39,10 +41,16 @@ $$
 which are the translational, rotational, vibrational, and electronic contributions.
 
 ### Enthalpy
+The enthalpy is derived from the partition function.
+
+$$
+E = k_B T^2 \left(\frac{\partial \ln Q}{\partial T}\right)_V 
+$$
+
 The internal can also be divided as translational, rotational, vibrational (including zero-point-energy $E_{\text{ZPE}}$), and electronic contributions.
 
 $$
-E = k_B T^2 \left(\frac{\partial \ln Q}{\partial T}\right)_V = E_{\text{trans}} + E_{\text{rot}} + E_{\text{vib}} + E_{\text{ele}}
+E = E_{\text{trans}} + E_{\text{rot}} + E_{\text{vib}} + E_{\text{ele}}
 $$
 
 The enthalpy $H$ of the gas is expressed by the internal energy $E$
@@ -70,7 +78,7 @@ C_P - C_V = k_B
 $$
 
 ## Translational contributions
-The translational partition function from the Sackur-Tetrode equation is 
+The translational partition function from the Sackur-Tetrode equation is
 
 $$
 Q_{\text{trans}} = \left ( \frac{2 \pi m k_B T} {h^2} \right )^{\frac{3}{2}} V
@@ -208,6 +216,7 @@ E_{\text{vib}} & \equiv E_{\text{ZPE}} + k_BT^2 \left(\frac{\partial \ln Q_{\tex
 $$
 
 Since the contribution to $E$ should be independent to the forms of the partition functions
+
 $$
 E_{\text{ZPE}} =\frac{1}{2} \sum_i h\nu_i
 $$
